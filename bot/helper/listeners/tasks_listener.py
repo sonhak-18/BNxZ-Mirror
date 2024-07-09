@@ -402,7 +402,7 @@ class MirrorLeechListener:
         self.seed = False if config_dict['DISABLE_SEED'] else self.seed
         LOGGER.info(f'Done Uploading {name}')
         lmsg = f'<b><i>{escape(name)}</i></b>'
-        lmsg += f'\n\n◘ <code>Client      </code>: <i>{self.tag}</i>'
+        lmsg += f'\n\n◘ <code>Client       </code>: <i>{self.tag}</i>'
         gmsg = f'Hey <b>{self.tag}</b>!\nYour job is done.'
         msg = f'\n◘ <code>Size            </code>: {get_readable_file_size(size)}'
         msg += f"\n◘ <code>Elapsed         </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
@@ -468,7 +468,7 @@ class MirrorLeechListener:
                 await start_from_queued()
                 return
         else:
-            msg += f'\n<code>◘ Type            </code>: {mime_type}'
+            msg += f'\n◘ <code>Type            </code>: {mime_type}'
             if mime_type == "Folder":
                 msg += f'\n<code>◘ Sub Folders     </code>: {folders}'
                 msg += f'\n<code>◘ Files           </code>: {files}'
