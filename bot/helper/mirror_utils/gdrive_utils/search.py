@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from logging import getLogger
+from urllib.parse import quote as rquote
 
 from bot import list_drives_dict, config_dict
 from bot.helper.ext_utils.bot_utils import get_readable_file_size
