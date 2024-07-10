@@ -402,16 +402,16 @@ class MirrorLeechListener:
         self.seed = False if config_dict['DISABLE_SEED'] else self.seed
         LOGGER.info(f'Done Uploading {name}')
         lmsg = f'<b><i>{escape(name)}</i></b>'
-        lmsg += f'\n\n◘ <code>Client          </code>: <i>{self.tag}</i>'
+        lmsg += f'\n\n◘ <code>Client        </code>: <i>{self.tag}</i>'
         gmsg = f'Hey <b>{self.tag}</b>!\nYour job is done.'
-        msg = f'\n◘ <code>Size            </code>: {get_readable_file_size(size)}'
-        msg += f"\n◘ <code>Elapsed         </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f"\n◘ <code>Upload          </code>: {self.extra_details['mode']}"
+        msg = f'\n◘ <code>Size          </code>: {get_readable_file_size(size)}'
+        msg += f"\n◘ <code>Elapsed       </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
+        msg += f"\n◘ <code>Upload        </code>: {self.extra_details['mode']}"
         _msg = '' if rclonePath == '' else f'\n\n<code>Path            </code>: {rclonePath}'
         msg_ = '\n\n◘ <b><i>Link has been sent in your DM.</i></b>'
         buttons = ButtonMaker()
         if self.isLeech:
-            msg += f'\n◘ <code>Total Files     </code>: {folders}\n'
+            msg += f'\n◘ <code>Total Files   </code>: {folders}\n'
             if mime_type != 0:
                 msg += f'<code>◘ Corrupted Files</code> : {mime_type}\n'
             msg_ = '\n◘ <b><i>Files has been sent in your DM.</i></b>'
@@ -468,10 +468,10 @@ class MirrorLeechListener:
                 await start_from_queued()
                 return
         else:
-            msg += f'\n◘ <code>Type            </code>: {mime_type}'
+            msg += f'\n◘ <code>Type          </code>: {mime_type}'
             if mime_type == "Folder":
-                msg += f'\n<code>◘ Sub Folders     </code>: {folders}'
-                msg += f'\n<code>◘ Files           </code>: {files}'
+                msg += f'\n<code>◘ Sub Folders   </code>: {folders}'
+                msg += f'\n<code>◘ Files         </code>: {files}'
             if link or rclonePath and config_dict['RCLONE_SERVE_URL']:
                 buttons = ButtonMaker()
                 if link:
