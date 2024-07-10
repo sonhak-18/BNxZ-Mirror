@@ -116,7 +116,7 @@ async def stats(_, message, edit_mode=False):
     mem_p       = memory.percent
     swap        = swap_memory()
 
-    bot_stats = f'<b><i><u>Zee Bot Statistics</u></i></b>\n\n'\
+    bot_stats = f'<b><i><u>BNxZee Mirror Statistics</u></i></b>\n\n'\
                 f'<code>CPU  : </code>{get_progress_bar_string(cpuUsage)} {cpuUsage}%\n' \
                 f'<code>RAM  : </code>{get_progress_bar_string(mem_p)} {mem_p}%\n' \
                 f'<code>SWAP : </code>{get_progress_bar_string(swap.percent)} {swap.percent}%\n' \
@@ -126,7 +126,7 @@ async def stats(_, message, edit_mode=False):
                 f'<code>Downloaded      : </code> {recv}\n' \
                 f'<code>Total Bandwidth : </code> {tb}'
 
-    sys_stats = f'<b><i><u>Zee System Statistics</u></i></b>\n\n'\
+    sys_stats = f'<b><i><u>BnxZee System Statistics</u></i></b>\n\n'\
                 f'<b>System Uptime:</b> <code>{sysTime}</code>\n' \
                 f'<b>CPU:</b> {get_progress_bar_string(cpuUsage)}<code> {cpuUsage}%</code>\n' \
                 f'<b>CPU Total Core(s):</b> <code>{cpu_count(logical=True)}</code>\n' \
@@ -218,7 +218,7 @@ async def send_repo_stats(_, query):
                 update_info =  f'⚠️ New Version Update Available ⚠️\n'
                 update_info += f'Update ASAP and experience new features and bug-fixes.'
         
-    repo_stats = f'<b><i><u>Zee Repository Info</u></i></b> \n\n' \
+    repo_stats = f'<b><i><u>BNxZee Repository Info</u></i></b> \n\n' \
                  f'<b><i>Official Repository</i></b>        \n'   \
                  f'<code>- Updated   : </code> {commit_date}\n'   \
                  f'<code>- Version   : </code> {vtag}       \n'   \
@@ -252,7 +252,7 @@ async def send_bot_limits(_, query):
     UMT = 'Unlimited' if config_dict['USER_MAX_TASKS']  == '' else config_dict['USER_MAX_TASKS']
     BMT = 'Unlimited' if config_dict['QUEUE_ALL']       == '' else config_dict['QUEUE_ALL']
 
-    bot_limit = f'<b><i><u>Zee Bot Limitations</u></i></b>\n' \
+    bot_limit = f'<b><i><u>BNxZee Bot Limitations</u></i></b>\n' \
                 f'<code>Torrent   : {TOR}</code> <b>GB</b>\n' \
                 f'<code>G-Drive   : {GDL}</code> <b>GB</b>\n' \
                 f'<code>Yt-Dlp    : {YTD}</code> <b>GB</b>\n' \
