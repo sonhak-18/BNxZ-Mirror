@@ -413,7 +413,7 @@ class MirrorLeechListener:
         if self.isLeech:
             msg += f'\n◘ <code>Total Files   </code>: {folders}\n'
             if mime_type != 0:
-                msg += f'<code>◘ Corrupted Files</code> : {mime_type}\n'
+                msg += f'◘ <code>Corrupted Files</code> : {mime_type}\n'
             msg_ = '\n◘ <b><i>Files has been sent in your DM.</i></b>'
             if not self.dmMessage:
                 if not files:
@@ -470,8 +470,8 @@ class MirrorLeechListener:
         else:
             msg += f'\n◘ <code>Type          </code>: {mime_type}'
             if mime_type == "Folder":
-                msg += f'\n<code>◘ Sub Folders   </code>: {folders}'
-                msg += f'\n<code>◘ Files         </code>: {files}'
+                msg += f'\n◘ <code>Sub Folders   </code>: {folders}'
+                msg += f'\n◘ <code>Files         </code>: {files}'
             if link or rclonePath and config_dict['RCLONE_SERVE_URL']:
                 buttons = ButtonMaker()
                 if link:
